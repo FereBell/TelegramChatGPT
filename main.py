@@ -18,8 +18,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id= update.effective_chat.id, text= startString)
 
 if __name__ == '__main__':
-    application = ApplicationBuilder().token('6060346663:AAFL3s1t0-DQV6IfwYEgsjlqZ8Rvl9k7lv4').build()
-    openai.api_key = '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'
+    application = ApplicationBuilder().token('KEY_TELEGRAM').build()
+    openai.api_key = 'KEY_OPENAI'
 
     application.add_handler(CommandHandler('start', start))
     application.add_handler(MessageHandler(filters.TEXT, ChatQuestion))
